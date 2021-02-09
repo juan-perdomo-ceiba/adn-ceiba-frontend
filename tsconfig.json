@@ -33,9 +33,12 @@
       "@producto/*": [
         "src/app/feature/producto/*"
       ],
+      "@lugar-turistico/*": [
+        "src/app/feature/lugar-turistico/*"
+      ],
       "@shared/*": [
         "src/app/shared/*"
-      ]
+      ],
     }
   },
   "angularCompilerOptions": {

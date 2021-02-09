@@ -1,0 +1,52 @@
+<div class="container text-center">
+  <h1>Crear Lugar Turistico</h1>
+  <form [formGroup]="lugarTuristicoForm" (ngSubmit)="cerar()">
+    
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Nombre:</label>
+      </div>
+      <div class="col-sm-8">
+        <input validar type="text" id="nombre" name="idProducto" placeholder="Nombre..." class="form-control"
+          formControlName="id">
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Descripción:</label>
+      </div>
+      <div class="col-sm-8">
+        <input validar type="text" id="descripcionLugarTuristico" name="descripcion" placeholder="Descripción..."
+          class="form-control" formControlName="descripcion">
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Municipio:</label>
+      </div>
+      <div class="col-sm-8">
+        <select class="form-select" id="municipioLugarTuristico" name="municipio">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Direccion:</label>
+      </div>
+      <div class="col-sm-8">
+        <input validar type="text" id="direccionLugarTuristico" name="direccion" placeholder="Direccion..."
+          class="form-control" formControlName="direccion">
+      </div>
+    </div>
+  </form> 
+</div>
+
+
+
