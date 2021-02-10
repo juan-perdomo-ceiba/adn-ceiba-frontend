@@ -15,6 +15,14 @@ export class ListarLugarTuristicoComponent implements OnInit {
   constructor(protected lugarTuristico: LugarTuristicoService) { }
 
   ngOnInit() {
+    this.cargarDatos();
+  }
+
+  public eliminar(lugarTuristico: LugarTuristico): void {
+      this.lugarTuristico.eliminar(lugarTuristico).subscribe(() => this.cargarDatos());
+  }
+
+  private cargarDatos() {
     this.listaLugaresTuristicos = this.lugarTuristico.consultar();
   }
 }

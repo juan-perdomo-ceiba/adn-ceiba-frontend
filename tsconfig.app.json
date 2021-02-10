@@ -23,6 +23,9 @@
       "@municipio/*": [
         "src/app/feature/municipio/*"
       ],
+      "@paquete-turistico/*": [
+        "src/app/feature/paquete-turistico/*"
+      ],
       "@shared/*": [
         "src/app/shared/*"
       ]

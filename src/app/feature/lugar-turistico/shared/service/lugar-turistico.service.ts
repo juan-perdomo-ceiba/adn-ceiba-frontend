@@ -19,7 +19,7 @@ export class LugarTuristicoService {
   }
 
   public eliminar(lugarTuristico: LugarTuristico) {
-    return this.http.doDelete<boolean>(`${environment.endpoint}/lugaes-turisticos/${lugarTuristico.id}`,
+    return this.http.doDelete<boolean>(`${environment.endpoint}/lugares-turisticos/${lugarTuristico.id}`,
                                                  this.http.optsName('eliminar lugar turistico'));
   }
 }

@@ -25,7 +25,7 @@ export class CrearLugarTuristicoComponent implements OnInit {
     this.$municipios = this.municipioServices.consultar();
   }
 
-  cerar() {
+  crear() {
     console.log(this.lugarTuristicoForm.value);
     this.lugarTuristicoServices.guardar(this.lugarTuristicoForm.value).subscribe(
       () => this.router.navigateByUrl('lugar-turistico/listar')

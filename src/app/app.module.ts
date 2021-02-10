@@ -9,6 +9,7 @@ import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
 import { LugarTuristicoModule } from '@lugar-turistico/lugar-turistico.module';
 import { MunicipioModule } from '@municipio/municipio.module';
+import { PaqueteTuristicoModule } from '@paquete-turistico/paquete-turistico.module';
 
 
 
@@ -24,6 +25,7 @@ import { MunicipioModule } from '@municipio/municipio.module';
     ProductoModule,
     LugarTuristicoModule,
     MunicipioModule,
+    PaqueteTuristicoModule,
     CoreModule
   ],
   providers: [CookieService],

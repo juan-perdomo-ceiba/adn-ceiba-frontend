@@ -1,0 +1,73 @@
+<div class="container text-center">
+  <h1>Crear Paquete Turistico</h1>
+  <form [formGroup]="paqueteTuristicoForm" (ngSubmit)="crear()">
+    
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Nombre:</label>
+      </div>
+      <div class="col-sm-8">
+        <input validar type="text" id="nombreLugarTuristico" name="nombre" placeholder="Nombre..." class="form-control"
+          formControlName="nombre">
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Descripción:</label>
+      </div>
+      <div class="col-sm-8">
+        <input validar type="text" id="descripcionLugarTuristico" name="descripcion" placeholder="Descripción..."
+          class="form-control" formControlName="descripcion">
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Lugar Turistico:</label>
+      </div>
+      <div class="col-sm-8">
+        <select formControlName="idLugarTuristico" class="form-select form-select-sm">
+          <option *ngFor="let opt of $lugaresTuristicos | async" [value]="opt.id">{{opt.nombre}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Cantidad maxima de personas:</label>
+      </div>
+      <div class="col-sm-8">
+        <input validar type="text" id="cantidadMaximaPersonasLugarTuristico" name="cantidadMaximaPersonas" placeholder="Cantidad maxima personas..."
+          class="form-control" formControlName="cantidadMaximaPersonas">
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Cantidad maxima de reservas:</label>
+      </div>
+      <div class="col-sm-8">
+        <input validar type="text" id="cantidadMaximaPersonasLugarTuristico" name="cantidadMaximaReservas" placeholder="Cantidad maxima reservas..."
+          class="form-control" formControlName="cantidadMaximaReservas">
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-4">
+        <label>Precio por persona:</label>
+      </div>
+      <div class="col-sm-8">
+        <input validar type="number" id="precioPaqueteTuristico" name="precioPorPersona" placeholder="Precio por persona..."
+          class="form-control" formControlName="precioPorPersona">
+      </div>
+    </div>
+
+    <div class="d-grid gap-2 col-2 mx-auto mt-2">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form> 
+</div>
+
+
+
