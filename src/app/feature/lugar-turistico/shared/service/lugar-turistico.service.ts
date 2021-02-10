@@ -10,7 +10,7 @@ export class LugarTuristicoService {
   constructor(protected http: HttpService) {}
 
   public consultar() {
-    return this.http.doGet<LugarTuristico[]>(`${environment.endpoint}/lugar-turistico`, this.http.optsName('consultar lugares turisticos'));
+    return this.http.doGet<LugarTuristico[]>(`${environment.endpoint}/lugares-turisticos`, this.http.optsName('consultar lugares turisticos'));
   }
 
   public guardar(producto: LugarTuristico) {
