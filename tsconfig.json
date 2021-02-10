@@ -42,6 +42,9 @@
       "@paquete-turistico/*": [
         "src/app/feature/paquete-turistico/*"
       ],
+      "@reserva/*": [
+        "src/app/feature/reserva/*"
+      ],
       "@shared/*": [
         "src/app/shared/*"
       ],

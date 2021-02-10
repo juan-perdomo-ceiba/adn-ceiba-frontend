@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
   { path: 'lugar-turistico', loadChildren: () => import('@lugar-turistico/lugar-turistico.module').then(mod => mod.LugarTuristicoModule) },
-  { path: 'paquete-turistico', loadChildren: () => import('@paquete-turistico/paquete-turistico.module').then(mod => mod.PaqueteTuristicoModule) }
+  { path: 'paquete-turistico', loadChildren: () => import('@paquete-turistico/paquete-turistico.module').then(mod => mod.PaqueteTuristicoModule) },
+  { path: 'reserva', loadChildren: () => import('@reserva/reserva.module').then(mod => mod.ReservaModule) }
 ];
 
 @NgModule({
