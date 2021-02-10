@@ -8,6 +8,7 @@ import { ProductoModule } from '@producto/producto.module';
 import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
 import { LugarTuristicoModule } from '@lugar-turistico/lugar-turistico.module';
+import { MunicipioModule } from '@municipio/municipio.module';
 
 
 
@@ -22,6 +23,7 @@ import { LugarTuristicoModule } from '@lugar-turistico/lugar-turistico.module';
     AppRoutingModule,
     ProductoModule,
     LugarTuristicoModule,
+    MunicipioModule,
     CoreModule
   ],
   providers: [CookieService],

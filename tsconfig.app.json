@@ -20,6 +20,9 @@
       "@lugar-turistico/*": [
         "src/app/feature/lugar-turistico/*"
       ],
+      "@municipio/*": [
+        "src/app/feature/municipio/*"
+      ],
       "@shared/*": [
         "src/app/shared/*"
       ]

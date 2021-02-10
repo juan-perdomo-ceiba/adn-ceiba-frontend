@@ -7,8 +7,8 @@
         <label>Nombre:</label>
       </div>
       <div class="col-sm-8">
-        <input validar type="text" id="nombre" name="idProducto" placeholder="Nombre..." class="form-control"
-          formControlName="id">
+        <input validar type="text" id="nombreLugarTuristico" name="nombre" placeholder="Nombre..." class="form-control"
+          formControlName="nombre">
       </div>
     </div>
 
@@ -27,11 +27,8 @@
         <label>Municipio:</label>
       </div>
       <div class="col-sm-8">
-        <select class="form-select" id="municipioLugarTuristico" name="municipio">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+        <select formControlName="idMunicipio" class="form-select form-select-sm">
+          <option *ngFor="let opt of $municipios | async" [value]="opt.id">{{opt.nombre}}</option>
         </select>
       </div>
     </div>
@@ -44,6 +41,10 @@
         <input validar type="text" id="direccionLugarTuristico" name="direccion" placeholder="Direccion..."
           class="form-control" formControlName="direccion">
       </div>
+    </div>
+
+    <div class="d-grid gap-2 col-2 mx-auto mt-2">
+      <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
   </form> 
 </div>

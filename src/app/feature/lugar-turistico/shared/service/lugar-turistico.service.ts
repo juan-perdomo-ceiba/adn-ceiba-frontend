@@ -13,13 +13,13 @@ export class LugarTuristicoService {
     return this.http.doGet<LugarTuristico[]>(`${environment.endpoint}/lugares-turisticos`, this.http.optsName('consultar lugares turisticos'));
   }
 
-  public guardar(producto: LugarTuristico) {
-    return this.http.doPost<LugarTuristico, boolean>(`${environment.endpoint}/lugar-turistico`, producto,
+  public guardar(lugarTuristico: LugarTuristico) {
+    return this.http.doPost<LugarTuristico, boolean>(`${environment.endpoint}/lugares-turisticos`, lugarTuristico,
                                                 this.http.optsName('crear/actualizar lugar turistico'));
   }
 
-  public eliminar(producto: LugarTuristico) {
-    return this.http.doDelete<boolean>(`${environment.endpoint}/lugar-turistico/${producto.id}`,
+  public eliminar(lugarTuristico: LugarTuristico) {
+    return this.http.doDelete<boolean>(`${environment.endpoint}/lugaes-turisticos/${lugarTuristico.id}`,
                                                  this.http.optsName('eliminar lugar turistico'));
   }
 }

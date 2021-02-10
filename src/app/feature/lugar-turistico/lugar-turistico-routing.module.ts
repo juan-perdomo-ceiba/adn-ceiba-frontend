@@ -12,6 +12,11 @@ const routes: Routes = [
     component: LugarTuristicoComponent,
     children: [
       {
+        path:'',
+        redirectTo: 'listar',
+        pathMatch: 'full' 
+      },
+      {
         path: 'crear',
         component: CrearLugarTuristicoComponent
       },

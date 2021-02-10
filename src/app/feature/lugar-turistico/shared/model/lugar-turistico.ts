@@ -3,6 +3,7 @@ export class LugarTuristico {
     nombre: string;
     descripcion: string;
     direccion: string;
+    idMunicipio: number;
 
     constructor(id: string, descripcion: string) {
         this.id = id;
