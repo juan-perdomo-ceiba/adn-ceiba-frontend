@@ -13,6 +13,7 @@ export class AppComponent {
     { url: '/home', nombre: 'home' },
     { url: '/lugar-turistico', nombre: 'Lugares Turisticos' },
     { url: '/paquete-turistico', nombre: 'Paquetes Turisticos' },
-    { url: '/reserva', nombre: 'Reservas' }
+    { url: '/reserva', nombre: 'Reservas' },
+    { url: '/reserva/consultar', nombre: 'Consultar reserva'}
   ];
 }

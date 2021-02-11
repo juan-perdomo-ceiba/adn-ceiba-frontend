@@ -1,9 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LugarTuristicoService } from '@lugar-turistico/shared/service/lugar-turistico.service';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { LugarTuristico } from '@lugar-turistico/shared/model/lugar-turistico';
 import { PaqueteTuristicoService } from '@paquete-turistico/shared/service/paquete-turistico.service';
 import { PaqueteTuristico } from '@paquete-turistico/shared/model/paquete-turistico';
 import { ReservaService } from '@reserva/shared/service/reserva.service';
@@ -15,7 +14,6 @@ import { ReservaService } from '@reserva/shared/service/reserva.service';
 export class CrearReservaComponent implements OnInit, OnDestroy {
   readonly PARAMETRO_ID_PAQUETE_TURISTICO = "id";
   public reservaForm: FormGroup;
-  public $lugaresTuristicos: Observable<LugarTuristico[]>;
   private $subscriptionConsultarPaqueteTuristicoPorId: Subscription;
   public paqueteTuristico = {} as PaqueteTuristico;
 
@@ -24,8 +22,7 @@ export class CrearReservaComponent implements OnInit, OnDestroy {
     protected paqueteTuristicoServices: PaqueteTuristicoService, protected activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.construirFormularioProducto();
-    this.$lugaresTuristicos = this.lugarTuristicoServices.consultar();
+    this.construirFormularioRserva();
     const idPaqueteTuristico = this.activeRoute.snapshot.paramMap.get(this.PARAMETRO_ID_PAQUETE_TURISTICO);
     this.$subscriptionConsultarPaqueteTuristicoPorId = this.paqueteTuristicoServices.consultarPorId(idPaqueteTuristico).subscribe(response => this.paqueteTuristico = response);
   }
@@ -40,7 +37,7 @@ export class CrearReservaComponent implements OnInit, OnDestroy {
     );
   }
 
-  private construirFormularioProducto() {
+  private construirFormularioRserva() {
     this.reservaForm = new FormGroup({
       fechaReserva: new FormControl('', [Validators.required]),
       cedulaCliente: new FormControl('', [Validators.required]),

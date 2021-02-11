@@ -17,4 +17,12 @@ export class ReservaService {
     return this.http.doPost<Reserva, boolean>(`${environment.endpoint}/reservas`, paqueteTuristico,
                                                 this.http.optsName('crear/actualizar reserva'));
   }
+
+  public consultarPorId(id) {
+    return this.http.doGet<Reserva>(`${environment.endpoint}/reservas/${id}`, this.http.optsName('consultar reserva'));
+  }
+
+  public consultarPorIdentificador(identificador) {
+    return this.http.doGet<Reserva>(`${environment.endpoint}/reservas/detalle/${identificador}`, this.http.optsName('consultar reserva por identificador'));
+  }
 }

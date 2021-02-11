@@ -21,7 +21,7 @@ export class CrearLugarTuristicoComponent implements OnInit {
   constructor(protected lugarTuristicoServices: LugarTuristicoService, protected municipioServices: MunicipioService, private router: Router) { }
 
   ngOnInit() {
-    this.construirFormularioProducto();
+    this.construirFormularioLugarTuristico();
     this.$municipios = this.municipioServices.consultar();
   }
 
@@ -32,7 +32,7 @@ export class CrearLugarTuristicoComponent implements OnInit {
     );
   }
 
-  private construirFormularioProducto() {
+  private construirFormularioLugarTuristico() {
     this.lugarTuristicoForm = new FormGroup({
       nombre: new FormControl('', [Validators.required]),
       descripcion: new FormControl('', [Validators.required, Validators.minLength(LONGITUD_MINIMA_PERMITIDA_TEXTO),
