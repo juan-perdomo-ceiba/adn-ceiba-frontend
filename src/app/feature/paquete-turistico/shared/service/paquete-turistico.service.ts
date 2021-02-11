@@ -10,7 +10,7 @@ export class PaqueteTuristicoService {
   constructor(protected http: HttpService) {}
 
   public consultar() {
-    return this.http.doGet<PaqueteTuristico[]>(`${environment.endpoint}/paquetes-turisticos`, this.http.optsName('consultar lugares turisticos'));
+    return this.http.doGet<PaqueteTuristico[]>(`${environment.endpoint}/paquetes-turisticos`, this.http.optsName('consultar paquetes turisticos'));
   }
 
   public guardar(paqueteTuristico: PaqueteTuristico) {
@@ -21,5 +21,9 @@ export class PaqueteTuristicoService {
   public eliminar(paqueteTuristico: PaqueteTuristico) {
     return this.http.doDelete<boolean>(`${environment.endpoint}/paquetes-turisticos/${paqueteTuristico.id}`,
                                                  this.http.optsName('eliminar lugar turistico'));
+  }
+
+  public consultarPorId(id) {
+    return this.http.doGet<PaqueteTuristico>(`${environment.endpoint}/paquetes-turisticos/${id}`, this.http.optsName('consultar paquete turistico'));
   }
 }

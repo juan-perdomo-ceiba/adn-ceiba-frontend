@@ -16,7 +16,7 @@ const routes: Routes = [
         pathMatch: 'full' 
       },
       {
-        path: 'crear',
+        path: ':id/crear',
         component: CrearReservaComponent
       },
       {
