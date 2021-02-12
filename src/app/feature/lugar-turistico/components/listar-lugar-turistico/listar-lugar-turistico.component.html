@@ -22,7 +22,7 @@
         <td>{{item.idMunicipio}}</td>
         <td>
           <a type="button" (click)="eliminar(item)"><i class="fa fa-trash" aria-hidden="true"></i></a>
-          <a class="ms-3" type="button" [routerLink]="['/editar', item.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+          <a class="ms-3" type="button" [routerLink]="['/lugar-turistico', 'editar', item.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
         </td>
       </tr>
     </tbody>

@@ -14,6 +14,7 @@ export class CrearLugarTuristicoComponent implements OnInit {
   public lugarTuristicoForm: FormGroup;
   public $municipios: Observable<Municipio[]>; 
   public idLugarTuristico;
+  
   constructor(protected lugarTuristicoServices: LugarTuristicoService, protected municipioServices: MunicipioService, private router: Router, private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {

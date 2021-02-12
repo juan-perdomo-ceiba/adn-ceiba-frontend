@@ -22,6 +22,10 @@ const routes: Routes = [
       {
         path: 'listar',
         component: ListarPaqueteTuristicoComponent
+      },
+      {
+        path: 'editar/:id',
+        component: CrearPaqueteTuristicoComponent
       }
     ]
   }
