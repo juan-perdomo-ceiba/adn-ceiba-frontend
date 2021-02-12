@@ -18,8 +18,18 @@ export class LugarTuristicoService {
                                                 this.http.optsName('crear/actualizar lugar turistico'));
   }
 
+  
+  public editar(lugarTuristico: LugarTuristico) {
+    return this.http.doPut<LugarTuristico, boolean>(`${environment.endpoint}/lugares-turisticos/${lugarTuristico.id}`, lugarTuristico,
+                                                this.http.optsName('crear/actualizar lugar turistico'));
+  }
+
   public eliminar(lugarTuristico: LugarTuristico) {
     return this.http.doDelete<boolean>(`${environment.endpoint}/lugares-turisticos/${lugarTuristico.id}`,
                                                  this.http.optsName('eliminar lugar turistico'));
+  }
+
+  public consultarPorId(id) {
+    return this.http.doGet<LugarTuristico>(`${environment.endpoint}/lugares-turisticos/${id}`, this.http.optsName('consultar lugare turistico'));
   }
 }

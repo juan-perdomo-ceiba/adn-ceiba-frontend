@@ -27,6 +27,10 @@ const routes: Routes = [
       {
         path: 'borrar',
         component: BorrarLugarTuristicoComponent
+      },
+      {
+        path: 'editar/:id',
+        component: CrearLugarTuristicoComponent
       }
     ]
   }

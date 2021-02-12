@@ -17,15 +17,15 @@ export class ConsultarReservaComponent implements OnInit, OnDestroy {
   constructor(
     protected reservaServices: ReservaService, protected router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public consultarReserva() {
     this.$subscreibeConsultaReserva = this.reservaServices.consultarPorIdentificador(this.identificadorReserva).subscribe(response => this.reserva = response);
   }
 
   ngOnDestroy() {
-    this.$subscreibeConsultaReserva.unsubscribe();
+    if(this.$subscreibeConsultaReserva) {
+      this.$subscreibeConsultaReserva.unsubscribe();
+    }
   }
-  
 }
