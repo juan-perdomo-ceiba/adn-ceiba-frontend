@@ -1,2 +1,7 @@
+<h1 *ngIf="estaAutenticado()" class="title"> <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{usuario ? usuario.username : ''}}</h1>
+
 <h1>Paquetes Turisticos Eje Cafetero <i class="fa fa-map-marker" aria-hidden="true"></i></h1>
-<div class="more"></div>
+
+<div *ngIf="estaAutenticado()" class="more" (click)="cerrarSesion()">
+    <button class="btn btn-primary" type="button">Cerrar Sesion <i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
+</div>

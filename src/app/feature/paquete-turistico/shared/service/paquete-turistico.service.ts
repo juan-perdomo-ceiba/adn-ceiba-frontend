@@ -18,6 +18,11 @@ export class PaqueteTuristicoService {
                                                 this.http.optsName('crear/actualizar lugar turistico'));
   }
 
+  public editar(paqueteTuristico: PaqueteTuristico) {
+    return this.http.doPut<PaqueteTuristico, boolean>(`${environment.endpoint}/paquetes-turisticos/${paqueteTuristico.id}`, paqueteTuristico,
+                                                this.http.optsName('crear/actualizar lugar turistico'));
+  }
+
   public eliminar(paqueteTuristico: PaqueteTuristico) {
     return this.http.doDelete<boolean>(`${environment.endpoint}/paquetes-turisticos/${paqueteTuristico.id}`,
                                                  this.http.optsName('eliminar lugar turistico'));

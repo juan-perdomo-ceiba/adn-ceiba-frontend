@@ -6,13 +6,16 @@ import { CrearReservaComponent } from './components/crear-reserva/crear-reserva.
 import { ListarReservaComponent } from './components/listar-reserva/listar-reserva.component';
 import { ReservaComponent } from './components/reserva/reserva.component';
 import { ReservaRoutingModule } from './reserva.routing.module';
-
+import { DetalleReservaComponent } from './components/detalle-reserva/detalle-reserva.component';
+import { ConsultarReservaComponent } from './components/consultar-reserva/consultar-reserva.component';
 
 @NgModule({
   declarations: [
     CrearReservaComponent,
     ListarReservaComponent,
-    ReservaComponent
+    ReservaComponent,
+    DetalleReservaComponent,
+    ConsultarReservaComponent
   ],
   imports: [
     ReservaRoutingModule,

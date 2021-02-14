@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SeguridadService } from '@seguridad/shared/service/seguridad.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -20,18 +22,33 @@ import { Component, OnInit } from '@angular/core';
   }
 
   .more {
-    background: url("/assets/svg/more.svg");
     float: right;
-    height: 24px;
-    margin-top: 12px;
-    width: 24px;
-  }`]
+    margin-top: 5px;
+    top: 10
+  }
+  
+  .title {
+    margin-right: 2%
+  }
+  `]
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  public usuario;
+
+  constructor(protected seguridadServices: SeguridadService, protected router: Router) { }
 
   ngOnInit() {
+    this.usuario = this.seguridadServices.obtenerUsuario();
+  }
+
+  estaAutenticado(): boolean {
+    return this.seguridadServices.obtenerUsuario();
+  }
+
+  cerrarSesion() {
+    this.seguridadServices.cerrarSesion();
+    this.router.navigateByUrl('/home');
   }
 
 }

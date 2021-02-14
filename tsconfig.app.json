@@ -14,9 +14,6 @@
       "@home/*": [
         "src/app/feature/home/*"
       ],
-      "@producto/*": [
-        "src/app/feature/producto/*"
-      ],
       "@lugar-turistico/*": [
         "src/app/feature/lugar-turistico/*"
       ],
@@ -28,6 +25,9 @@
       ],
       "@reserva/*": [
         "src/app/feature/reserva/*"
+      ],
+      "@seguridad/*": [
+        "src/app/feature/seguridad/*"
       ],
       "@shared/*": [
         "src/app/shared/*"

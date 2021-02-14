@@ -1,0 +1,24 @@
+<div class="container text-center">
+  <h1>Tu reserva:</h1>
+  <div class="mt-3">
+    <div class="card mb-3 border-primary">
+      <img src="/assets/image/default-lugar-turistico.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Fecha reserva: {{reserva.fechaReserva}}</h4>
+        <p class="card-text">Cedula: {{reserva.cedulaCliente}}</p>
+        <p class="card-text">Nombre: {{reserva.nombreCliente}}</p>
+        <p class="card-text">{{reserva.telefonoCliente}}</p>
+        <p class="card-text">{{reserva.emailCliente}}</p>
+        <label>{{reserva.observaciones}}</label>
+
+        <div class="row mt-2">
+            <small class="text-muted">Cantidad de personas: {{reserva.numeroPersonas}}</small>
+            <small class="text-muted">Precio por persona:</small>
+            <small class="text-muted">Precio total: {{reserva.precio}}</small>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
