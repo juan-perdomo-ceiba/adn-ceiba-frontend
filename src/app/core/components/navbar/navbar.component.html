@@ -1,3 +1,5 @@
 <nav>
-  <a *ngFor="let item of items" [routerLink]="item.url" routerLinkActive="active">{{item.nombre}}</a>
+  <ng-container *ngFor="let item of items">
+    <a *ngIf="item.mostrarAutenticado && estaAutenticado() ||!item.mostrarAutenticado && !estaAutenticado()" [routerLink]="item.url" routerLinkActive="active">{{item.nombre}}</a>
+  </ng-container>
 </nav>

@@ -29,6 +29,9 @@
       "@reserva/*": [
         "src/app/feature/reserva/*"
       ],
+      "@seguridad/*": [
+        "src/app/feature/seguridad/*"
+      ],
       "@shared/*": [
         "src/app/shared/*"
       ]

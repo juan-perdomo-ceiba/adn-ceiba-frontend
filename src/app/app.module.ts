@@ -11,9 +11,7 @@ import { LugarTuristicoModule } from '@lugar-turistico/lugar-turistico.module';
 import { MunicipioModule } from '@municipio/municipio.module';
 import { PaqueteTuristicoModule } from '@paquete-turistico/paquete-turistico.module';
 import { ReservaModule } from '@reserva/reserva.module';
-
-
-
+import { SeguridadModule } from '@seguridad/seguridad.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +26,7 @@ import { ReservaModule } from '@reserva/reserva.module';
     MunicipioModule,
     PaqueteTuristicoModule,
     ReservaModule,
+    SeguridadModule,
     CoreModule
   ],
   providers: [CookieService],

@@ -10,10 +10,11 @@ import { MenuItem } from '@core/modelo/menu-item';
 export class AppComponent {
   title = 'app-base';
   public companies: MenuItem[] = [
-    { url: '/home', nombre: 'home' },
-    { url: '/lugar-turistico', nombre: 'Lugares Turisticos' },
-    { url: '/paquete-turistico', nombre: 'Paquetes Turisticos' },
-    { url: '/reserva', nombre: 'Reservas' },
-    { url: '/reserva/consultar', nombre: 'Consultar reserva'}
+    { url: '/home', nombre: 'home' , mostrarAutenticado: false},
+    { url: '/lugar-turistico', nombre: 'Lugares Turisticos', mostrarAutenticado: true},
+    { url: '/paquete-turistico', nombre: 'Paquetes Turisticos', mostrarAutenticado: true },
+    { url: '/reserva', nombre: 'Reservas', mostrarAutenticado: true},
+    { url: '/reserva/consultar', nombre: 'Consultar reserva', mostrarAutenticado: false},
+    { url: '/login', nombre: 'login', mostrarAutenticado: false}
   ];
 }
