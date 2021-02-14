@@ -30,9 +30,6 @@
       "@home/*": [
         "src/app/feature/home/*"
       ],
-      "@producto/*": [
-        "src/app/feature/producto/*"
-      ],
       "@lugar-turistico/*": [
         "src/app/feature/lugar-turistico/*"
       ],
