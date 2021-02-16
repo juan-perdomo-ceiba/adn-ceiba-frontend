@@ -23,7 +23,7 @@
         <td>{{item.cantidadMaximaReservas}}</td>
         <td>{{item.idLugarTuristico}}</td>
         <td>
-          <a type="button" (click)="eliminar(item)"><i class="fa fa-  " aria-hidden="true"></i></a>
+          <a type="button" (click)="eliminar(item)"><i class="fa fa-trash" aria-hidden="true"></i></a>
           <a class="ms-3" type="button" [routerLink]="['/paquete-turistico', 'editar', item.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
         </td>
       </tr>
