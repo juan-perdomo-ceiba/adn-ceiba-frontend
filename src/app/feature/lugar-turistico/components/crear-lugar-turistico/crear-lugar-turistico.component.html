@@ -27,7 +27,7 @@
         <label>Municipio:</label>
       </div>
       <div class="col-sm-8">
-        <select formControlName="idMunicipio" class="form-select form-select-sm">
+        <select id="municipioLugaTuristico" formControlName="idMunicipio" class="form-select form-select-sm">
           <option *ngFor="let opt of $municipios | async" [value]="opt.id">{{opt.nombre}}</option>
         </select>
       </div>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="d-grid gap-2 col-2 mx-auto mt-2">
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button id="crearLugarTuristicoForm" type="submit" class="btn btn-primary">Enviar</button>
     </div>
   </form> 
 </div>
