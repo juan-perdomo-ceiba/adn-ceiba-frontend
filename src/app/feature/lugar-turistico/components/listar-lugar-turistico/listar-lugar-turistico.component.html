@@ -1,5 +1,5 @@
 <div class="row justify-content-around mt-2 mb-2">
-  <a href="#" class="col-2 btn btn-primary" routerLink="/lugar-turistico/crear">Crear Lugar Turistico  <span class="fa fa-plus-circle" aria-hidden="true"></span></a>
+  <a id="linkCrearLugarTuristico" href="#" class="col-2 btn btn-primary" routerLink="/lugar-turistico/crear">Crear Lugar Turistico  <span class="fa fa-plus-circle" aria-hidden="true"></span></a>
 </div>
 <div class="container">
   <table class="table">
@@ -13,7 +13,7 @@
         <th scope="col">Acciones</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="lugaresturisticos">
       <tr *ngFor="let item of listaLugaresTuristicos | async">
         <th scope="row">-</th>
         <td>{{item.nombre}}</td>
@@ -21,7 +21,7 @@
         <td>{{item.direccion}}</td>
         <td>{{item.idMunicipio}}</td>
         <td>
-          <a type="button" (click)="eliminar(item)"><i class="fa fa-trash" aria-hidden="true"></i></a>
+          <a id="buttonEliminarLugarTuristico" type="button" (click)="eliminar(item)"><i class="fa fa-trash" aria-hidden="true"></i></a>
           <a class="ms-3" type="button" [routerLink]="['/lugar-turistico', 'editar', item.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
         </td>
       </tr>
