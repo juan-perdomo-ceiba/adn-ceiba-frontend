@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  endpoint: '/PaquetesTuristicos'
+  endpoint: 'http://localhost:8080/PaquetesTuristicos'
 };
 
 /*

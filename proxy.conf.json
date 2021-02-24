@@ -1,6 +1,6 @@
 {
   "/PaquetesTuristicos": {
-    "target": "http://localhost:8080",
+    "target": "http://52.249.24.46",
     "logLevel": "debug"
   }
 }

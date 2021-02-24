@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  endpoint: '/prospectos-vida'
+  endpoint: 'http://52.249.24.46/PaquetesTuristicos'
 };

@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  app-server:
+    image: adn-front-jperdomo:latest
+    ports:
+      - "4200:80"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      - netfront
+volumes:
+  db-data:
+
+networks:
+  netfront:
